@@ -1,12 +1,4 @@
-from pathlib import Path
-from zipfile import ZipFile
-import zipfile
-
-out_dir = Path("/mnt/data/grandbet_vip_mobile_v2")
-out_dir.mkdir(exist_ok=True)
-html_path = out_dir / "index.html"
-
-html = """<!doctype html>
+ """<!doctype html>
 <html lang="th">
 <head>
   <meta charset="utf-8">
@@ -162,9 +154,3 @@ html = """<!doctype html>
 </body>
 </html>
 """
-
-html_path.write_text(html, encoding="utf-8")
-zip_path = Path("/mnt/data/grandbet_vip_mobile_v2.zip")
-with ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as z:
-    z.write(html_path, arcname="index.html")
-print(f"[Download GrandBet VIP Mobile V2 ZIP](sandbox:{zip_path})")
