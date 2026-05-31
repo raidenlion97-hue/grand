@@ -22,6 +22,7 @@
       --msg:#1877f2;
       --shadow:0 30px 90px rgba(0,0,0,.60);
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -77,12 +78,14 @@
       top:12px;
       z-index:50;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
       min-width:0;
     }
+
     .logo{
       width:48px;
       height:48px;
@@ -100,6 +103,7 @@
         0 0 60px rgba(216,180,90,.16);
       animation:logoPulse 3.4s ease-in-out infinite;
     }
+
     .brand-title{
       min-width:0;
       text-align:left;
@@ -117,6 +121,7 @@
       color:var(--muted);
       font-size:12px;
     }
+
     .pill{
       padding:9px 13px;
       border-radius:999px;
@@ -138,59 +143,49 @@
       background:#0b0b0b;
     }
 
-   .slides{
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-}
+    .slides{
+      position:absolute;
+      inset:0;
+      z-index:0;
+      overflow:hidden;
+    }
 
-.slide{
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity .8s ease;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+    .slide{
+      position:absolute;
+      inset:0;
+      opacity:0;
+      transition:opacity .8s ease;
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+    }
 
-.slide.active{
-  opacity: 1;
-}
+    .slide.active{
+      opacity:1;
+    }
 
-.slide::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.82)),
-    radial-gradient(circle at 50% 28%, rgba(216,180,90,.14), transparent 34%);
-  z-index: 1;
-}
+    .slide::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.82)),
+        radial-gradient(circle at 50% 28%, rgba(216,180,90,.14), transparent 34%);
+      z-index:1;
+    }
 
-.slide.one{
-  background-image: url("./casino1.jpg");
-}
+    .slide.one{background-image:url("./casino1.jpg");}
+    .slide.two{background-image:url("./casino2.jpg");}
+    .slide.three{background-image:url("./casino3.jpg");}
 
-.slide.two{
-  background-image: url("./casino2.jpg");
-}
-
-.slide.three{
-  background-image: url("./casino3.jpg");
-}
-
-.hero-content{
-  position: relative;
-  z-index: 2;
-}
     .gold-particles{
       position:absolute;
       inset:0;
       pointer-events:none;
       overflow:hidden;
+      z-index:2;
     }
+
     .particle{
       position:absolute;
       width:6px;
@@ -212,7 +207,7 @@
       flex-direction:column;
       justify-content:center;
       align-items:center;
-      height:100%;
+      min-height:inherit;
       padding:26px 20px 18px;
       text-align:center;
     }
@@ -239,6 +234,7 @@
       letter-spacing:.10em;
       text-transform:uppercase;
     }
+
     .gold-text{
       background:linear-gradient(90deg, #fff4cb, #f7da8a, #d8b45a, #fff4cb);
       background-size:220% 100%;
@@ -248,6 +244,7 @@
       text-shadow:0 0 32px rgba(247,218,138,.12);
       animation:shimmer 4.8s linear infinite;
     }
+
     .sub{
       margin:14px 0 0;
       font-size:clamp(14px, 2vw, 18px);
@@ -255,6 +252,7 @@
       letter-spacing:.18em;
       text-transform:uppercase;
     }
+
     .lead{
       margin:18px 0 0;
       max-width:68ch;
@@ -281,6 +279,7 @@
         0 0 90px rgba(216,180,90,.08);
       overflow:hidden;
     }
+
     .logo-ring::before{
       content:"";
       position:absolute;
@@ -289,6 +288,7 @@
       border:1px solid rgba(216,180,90,.16);
       box-shadow:0 0 28px rgba(216,180,90,.10);
     }
+
     .logo-ring::after{
       content:"";
       position:absolute;
@@ -297,6 +297,7 @@
       animation:halo 3.6s ease-in-out infinite;
       pointer-events:none;
     }
+
     .logo-ring span{
       position:relative;
       z-index:1;
@@ -321,6 +322,7 @@
       grid-template-columns:repeat(3,1fr);
       gap:12px;
     }
+
     .btn{
       display:flex;
       align-items:center;
@@ -341,7 +343,12 @@
       position:relative;
       overflow:hidden;
     }
-    .btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+
+    .btn:hover{
+      transform:translateY(-2px);
+      filter:brightness(1.06);
+    }
+
     .btn::before{
       content:"";
       position:absolute;
@@ -350,6 +357,7 @@
       transform:translateX(-120%);
       animation:sweep 4.8s ease-in-out infinite;
     }
+
     .btn-wa{background:rgba(37,211,102,.16);border-color:rgba(37,211,102,.26)}
     .btn-line{background:rgba(34,197,94,.16);border-color:rgba(34,197,94,.26)}
     .btn-msg{background:rgba(24,119,242,.16);border-color:rgba(24,119,242,.26)}
@@ -361,6 +369,7 @@
       grid-template-columns:repeat(3,1fr);
       gap:12px;
     }
+
     .mini{
       padding:14px;
       border-radius:18px;
@@ -368,12 +377,14 @@
       border:1px solid rgba(255,255,255,.10);
       min-height:110px;
     }
+
     .mini b{
       display:block;
       margin-bottom:6px;
       font-size:15px;
       color:var(--gold2);
     }
+
     .mini span{
       display:block;
       font-size:13px;
@@ -387,18 +398,38 @@
       font-size:12px;
     }
 
-    @keyframes shimmer{0%{background-position:0% 50%}100%{background-position:220% 50%}}
-    @keyframes sweep{0%{transform:translateX(-120%) rotate(8deg)}45%{transform:translateX(120%) rotate(8deg)}100%{transform:translateX(120%) rotate(8deg)}}
-    @keyframes logoFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-4px) scale(1.02)}}
-    @keyframes logoPulse{0%,100%{box-shadow:0 0 0 rgba(216,180,90,0),0 0 26px rgba(216,180,90,.30),0 0 60px rgba(216,180,90,.16)}50%{box-shadow:0 0 0 rgba(216,180,90,0),0 0 36px rgba(216,180,90,.42),0 0 84px rgba(216,180,90,.26)}}
-    @keyframes halo{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:.92;transform:scale(1.04)}}
-    @keyframes rise{0%{transform:translate3d(0,110vh,0) scale(.8);opacity:0}10%{opacity:.55}100%{transform:translate3d(0,-18vh,0) scale(1.2);opacity:0}}
+    @keyframes shimmer{
+      0%{background-position:0% 50%}
+      100%{background-position:220% 50%}
+    }
+    @keyframes sweep{
+      0%{transform:translateX(-120%) rotate(8deg)}
+      45%{transform:translateX(120%) rotate(8deg)}
+      100%{transform:translateX(120%) rotate(8deg)}
+    }
+    @keyframes logoFloat{
+      0%,100%{transform:translateY(0) scale(1)}
+      50%{transform:translateY(-4px) scale(1.02)}
+    }
+    @keyframes logoPulse{
+      0%,100%{box-shadow:0 0 0 rgba(216,180,90,0),0 0 26px rgba(216,180,90,.30),0 0 60px rgba(216,180,90,.16)}
+      50%{box-shadow:0 0 0 rgba(216,180,90,0),0 0 36px rgba(216,180,90,.42),0 0 84px rgba(216,180,90,.26)}
+    }
+    @keyframes halo{
+      0%,100%{opacity:.55;transform:scale(1)}
+      50%{opacity:.92;transform:scale(1.04)}
+    }
+    @keyframes rise{
+      0%{transform:translate3d(0,110vh,0) scale(.8);opacity:0}
+      10%{opacity:.55}
+      100%{transform:translate3d(0,-18vh,0) scale(1.2);opacity:0}
+    }
 
     @media (max-width: 900px){
       .features{grid-template-columns:1fr}
       .btn-row{grid-template-columns:1fr}
-      .hero-inner{padding:18px 14px 16px}
     }
+
     @media (max-width: 640px){
       .wrap{padding:10px}
       .topbar{top:8px;padding:10px 12px;border-radius:18px}
@@ -406,7 +437,7 @@
       .brand-title b{font-size:18px}
       .logo{width:46px;height:46px;border-radius:15px;font-size:19px}
       .hero{border-radius:24px}
-      .hero-inner{min-height:calc(100vh - 20px);padding-top:20px}
+      .hero-content{padding-top:20px}
       .logo-ring{width:min(100%, 204px)}
       .glass-panel{padding:14px;border-radius:22px}
       .btn{min-height:54px;font-size:15px}
@@ -414,8 +445,13 @@
       .eyebrow{font-size:11px;letter-spacing:.10em}
       .sub{font-size:14px}
     }
+
     @media (prefers-reduced-motion: reduce){
-      *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+      *,*::before,*::after{
+        animation:none !important;
+        transition:none !important;
+        scroll-behavior:auto !important;
+      }
     }
   </style>
 </head>
@@ -436,7 +472,7 @@
       <div class="pill">ติดต่อเราได้ 24 ชั่วโมง</div>
     </header>
 
-    <main class="slides">
+    <main class="hero">
       <div class="slides" id="slides">
         <div class="slide one active"></div>
         <div class="slide two"></div>
@@ -477,6 +513,7 @@
   <script>
     const slides = Array.from(document.querySelectorAll('.slide'));
     let idx = 0;
+
     setInterval(() => {
       slides[idx].classList.remove('active');
       idx = (idx + 1) % slides.length;
@@ -486,6 +523,7 @@
     (function makeParticles(){
       const wrap = document.getElementById('goldParticles');
       if (!wrap) return;
+
       const n = 26;
       for (let i = 0; i < n; i++) {
         const p = document.createElement('span');
